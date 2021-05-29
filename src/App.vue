@@ -1,17 +1,22 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div class="appContainer">
+    <Hero />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import Hero from "./components/Hero";
 export default {
-  name: 'App',
+  name: "App",
+  data() {
+    return {
+      name: "Shubham",
+    };
+  },
   components: {
-    HelloWorld
-  }
-}
+    Hero,
+  },
+};
 </script>
 
 <style>
@@ -21,6 +26,20 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+}
+html {
+  box-sizing: border-box;
+}
+.appContainer {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #2c3e50;
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 </style>
